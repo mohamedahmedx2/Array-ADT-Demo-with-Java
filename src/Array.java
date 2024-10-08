@@ -23,7 +23,6 @@ public class Array {
 
         } else {
             for (int i = 0; i < numberOfItem; i++) {
-                System.out.println("Enter Item Number " + (i + 1) + ":");
                 int newItem = scanner.nextInt();
                 item[i] = newItem;
                 length++;
