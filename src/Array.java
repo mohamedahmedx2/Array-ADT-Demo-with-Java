@@ -23,7 +23,6 @@ public class Array {
 
         } else {
             for (int i = 0; i < numberOfItem; i++) {
-                System.out.println("Enter item number " + (i) + ":");
                 int newItem = scanner.nextInt();
                 item[i] = newItem;
                 length++;
@@ -49,16 +48,5 @@ public class Array {
         return length;
     }
 
-    int search(int key){
-        int index = -1;
-        for (int i = 0;i<length;i++)
-        {
-            if (item[i] == key)
-            {
-                index = i;
-                break;
-            }
-        }
-        return index;
-    }
+
 }

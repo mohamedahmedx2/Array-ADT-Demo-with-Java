@@ -10,15 +10,7 @@ public class Main {
       //  myArray.display();
         System.out.println("Array Size: "+myArray.getSize());
         System.out.println("Array length: "+myArray.getLength());
-        System.out.println("Enter the value to search for");
-        int key = scanner.nextInt();
-       int index = myArray.search(key);
-       if (index == -1)
-       {
-           System.out.println("item not found");
-       } else {
-           System.out.println("item found @ position: " + index);
-       }
+
     }
 
 
