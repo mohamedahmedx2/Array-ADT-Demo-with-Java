@@ -17,7 +17,7 @@ public class Array {
     void fill() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("How Many Items You Want To Fill?");
-        int numberOfItem = scanner.nextInt();
+        int numberOfItem = scanner.nextInt();   
         if (numberOfItem > size) {
             System.out.println("You Cannot Exceed The Array Size");
         } else {
@@ -99,6 +99,46 @@ public class Array {
             System.out.println("Element deleted successfully.");
         } else {
             System.out.println("index out of array rang");
+        }
+    }
+
+
+    // Update array size
+    void enlarge(int newSize)
+    {
+        if (newSize <= size)
+        {
+            System.out.println("new size must be larger than current size");
+        }
+        else {
+            size = newSize;
+            int[] old = items;
+            items = new int[newSize];
+            for (int i = 0;i < length;i++)
+            {
+                items[i] = old[i];
+            }
+        }
+    }
+
+
+    // Merge the two arrays
+    void merge (Array other)
+    {
+        int newSize = size+other.getSize();
+        size = newSize;
+        int[] old = items;
+        items = new int[newSize];
+        int i;
+        for (i = 0; i<length;i++)
+        {
+             items[i] = old[i];
+        }
+        int j = i;
+        for (i = 0; i < other.getLength();i++)
+        {
+            items[j++] = other.items[i];
+            length++;
         }
     }
 

@@ -39,11 +39,24 @@ public class Main {
         System.out.println("enter index to delete its item");
         int deleteIndex = scanner.nextInt();
         myArray.delete(deleteIndex);
+
+
+        // Step 7: Increase array size
+        System.out.println("enter the new size array");
+        int newSize = scanner.nextInt();
+        myArray.enlarge(newSize);
+
+
+
+        // Step 7: Merge arrays
+        Array other = new Array(3);
+        System.out.println("new array other");
+        other.fill();
+        myArray.merge(other);
         // Display final array
         System.out.println("Final array:");
         myArray.display();
-
-
+        System.out.println("Array size = " + myArray.getSize() + " Array length = " + myArray.getLength());
     }
 
 
